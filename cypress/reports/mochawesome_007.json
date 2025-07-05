@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-08T05:54:14.310Z",
+    "end": "2025-06-08T05:54:29.562Z",
+    "duration": 15252,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1762636f-9aa1-4218-b9bb-a1333fd6160c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\firsttestCase.cy.js",
+      "file": "cypress\\e2e\\firsttestCase.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "77be11cd-1e1d-4acd-987f-04638cacac1f",
+          "title": "First Test Case",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should search for a Product and verify it",
+              "fullTitle": "First Test Case should search for a Product and verify it",
+              "timedOut": null,
+              "duration": 11649,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_AmazonSearchPage.default.ProductSearch('Laptop');",
+              "err": {},
+              "uuid": "ed2902a4-98e4-4e12-a3df-9befdd71ab2c",
+              "parentUUID": "77be11cd-1e1d-4acd-987f-04638cacac1f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ed2902a4-98e4-4e12-a3df-9befdd71ab2c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11649,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

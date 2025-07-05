@@ -1,0 +1,19 @@
+class LoginLinkedin
+{
+    visit()
+    {
+        cy.visit("urlOfLinkedin");        
+    }
+    enterUserName(username)
+    {
+     cy.get('locate').type(username);
+    }
+    enterPassword(password)
+    {
+     cy.get('locate').type(password);
+    }
+    clickLogin()
+    {
+        cy.get('locate').click();
+    }
+}

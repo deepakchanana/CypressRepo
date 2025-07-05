@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-08T06:06:14.105Z",
+    "end": "2025-06-08T06:06:18.407Z",
+    "duration": 4302,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e4ba3654-7e50-40ba-a68c-5085bb2765dd",
+      "title": "",
+      "fullFile": "cypress\\E2E\\secondTestCase.cy.js",
+      "file": "cypress\\E2E\\secondTestCase.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2b836c76-8458-4496-b24d-0aa3749853b4",
+          "title": "Facebook functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Facebook first testcase",
+              "fullTitle": "Facebook functionality Facebook first testcase",
+              "timedOut": null,
+              "duration": 1948,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.google.com');",
+              "err": {},
+              "uuid": "0d450c17-8f6f-4187-9732-cb42810358e4",
+              "parentUUID": "2b836c76-8458-4496-b24d-0aa3749853b4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0d450c17-8f6f-4187-9732-cb42810358e4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1948,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

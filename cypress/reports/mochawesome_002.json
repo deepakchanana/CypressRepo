@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-01T06:22:47.891Z",
+    "end": "2025-06-01T06:22:58.023Z",
+    "duration": 10132,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e589bcc1-b14a-487c-a19e-3db2abfd0331",
+      "title": "",
+      "fullFile": "cypress\\e2e\\firsttestCase.cy.js",
+      "file": "cypress\\e2e\\firsttestCase.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d76273f2-01f8-493d-8afc-0bcdc33a99c9",
+          "title": "First Test Case",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should search for a Product and verify it",
+              "fullTitle": "First Test Case should search for a Product and verify it",
+              "timedOut": null,
+              "duration": 6906,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_AmazonSearchPage.default.ProductSearch('Laptop');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#twotabsearchtextbox`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#twotabsearchtextbox`, but never found it.\n    at AmazonSearchPage.ProductSearch (webpack://cypressautomation/./cypress/support/PageObjects/AmazonSearchPage.js:9:8)\n    at Context.eval (webpack://cypressautomation/./cypress/e2e/firsttestCase.cy.js:14:23)",
+                "diff": null
+              },
+              "uuid": "88950831-80cb-40d5-ab9a-6c2fa5ed1f41",
+              "parentUUID": "d76273f2-01f8-493d-8afc-0bcdc33a99c9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "88950831-80cb-40d5-ab9a-6c2fa5ed1f41"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6906,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

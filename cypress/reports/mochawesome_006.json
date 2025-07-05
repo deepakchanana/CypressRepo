@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-08T05:54:11.112Z",
+    "end": "2025-06-08T05:54:12.376Z",
+    "duration": 1264,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b40fbc23-9a11-45f8-9603-8b2a42f30b64",
+      "title": "",
+      "fullFile": "cypress\\e2e\\api_test2.cy.js",
+      "file": "cypress\\e2e\\api_test2.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d75c17e1-d128-48be-9ae7-cfe9e4730c7a",
+          "title": "API test cases using cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "First test case of API-->Get Method ",
+              "fullTitle": "API test cases using cypress First test case of API-->Get Method ",
+              "timedOut": null,
+              "duration": 349,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request(`https://reqres.in/api/users?page=2`).then(response => {\n  expect(response.status).to.eq(200); // assertion1\n  cy.log(response.body);\n});",
+              "err": {},
+              "uuid": "b9435de9-7e9a-42b5-b5ab-f59749010565",
+              "parentUUID": "d75c17e1-d128-48be-9ae7-cfe9e4730c7a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Post -Create a new record ",
+              "fullTitle": "API test cases using cypress Post -Create a new record ",
+              "timedOut": null,
+              "duration": 814,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('POST', `${baseUrl}`, {\n  name: 'dc',\n  job: 'manager'\n}).then(response => {\n  expect(response.status).to.eq(201);\n  expect(response.body).to.have.property('id');\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttps://reqres.in/api/users\n\nThe response we received from your web server was:\n\n  > 401: Unauthorized\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://reqres.in/api/users\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/14.3.2 Chrome/130.0.6723.137 Electron/33.2.1 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 29\n}\nBody: {\"name\":\"dc\",\"job\":\"manager\"}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 401 - Unauthorized\nHeaders: {\n  \"date\": \"Sun, 08 Jun 2025 05:54:10 GMT\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"content-length\": \"72\",\n  \"connection\": \"keep-alive\",\n  \"cf-ray\": \"94c6220d3f377935-AMD\",\n  \"report-to\": \"{\\\"group\\\":\\\"heroku-nel\\\",\\\"max_age\\\":3600,\\\"endpoints\\\":[{\\\"url\\\":\\\"https://nel.heroku.com/reports?ts=1749362050&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=AUVncdX97H0gm9pL%2FT8g47jaBl%2F0AcOa%2BJ0TCFe%2B3EM%3D\\\"}]}\",\n  \"reporting-endpoints\": \"heroku-nel=https://nel.heroku.com/reports?ts=1749362050&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=AUVncdX97H0gm9pL%2FT8g47jaBl%2F0AcOa%2BJ0TCFe%2B3EM%3D\",\n  \"nel\": \"{\\\"report_to\\\":\\\"heroku-nel\\\",\\\"max_age\\\":3600,\\\"success_fraction\\\":0.005,\\\"failure_fraction\\\":0.05,\\\"response_headers\\\":[\\\"Via\\\"]}\",\n  \"x-powered-by\": \"Express\",\n  \"access-control-allow-origin\": \"*\",\n  \"ratelimit-policy\": \"100;w=60\",\n  \"ratelimit-limit\": \"100\",\n  \"ratelimit-remaining\": \"99\",\n  \"ratelimit-reset\": \"60\",\n  \"etag\": \"W/\\\"48-+Z5A4MsbyryWjwqUCtZ7548heDc\\\"\",\n  \"via\": \"1.1 vegur\",\n  \"cf-cache-status\": \"DYNAMIC\",\n  \"server\": \"cloudflare\",\n  \"server-timing\": \"cfL4;desc=\\\"?proto=TCP&rtt=54612&min_rtt=52441&rtt_var=10487&sent=9&recv=8&lost=0&retrans=0&sent_bytes=4970&recv_bytes=993&delivery_rate=97421&cwnd=256&unsent_bytes=0&cid=eca62d5aaf2560db&ts=778&x=0\\\"\"\n}\nBody: {\n  \"error\": \"Missing API key.\",\n  \"how_to_get_one\": \"https://reqres.in/signup\"\n}\n\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttps://reqres.in/api/users\n\nThe response we received from your web server was:\n\n  > 401: Unauthorized\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://reqres.in/api/users\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/14.3.2 Chrome/130.0.6723.137 Electron/33.2.1 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 29\n}\nBody: {\"name\":\"dc\",\"job\":\"manager\"}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 401 - Unauthorized\nHeaders: {\n  \"date\": \"Sun, 08 Jun 2025 05:54:10 GMT\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"content-length\": \"72\",\n  \"connection\": \"keep-alive\",\n  \"cf-ray\": \"94c6220d3f377935-AMD\",\n  \"report-to\": \"{\\\"group\\\":\\\"heroku-nel\\\",\\\"max_age\\\":3600,\\\"endpoints\\\":[{\\\"url\\\":\\\"https://nel.heroku.com/reports?ts=1749362050&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=AUVncdX97H0gm9pL%2FT8g47jaBl%2F0AcOa%2BJ0TCFe%2B3EM%3D\\\"}]}\",\n  \"reporting-endpoints\": \"heroku-nel=https://nel.heroku.com/reports?ts=1749362050&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=AUVncdX97H0gm9pL%2FT8g47jaBl%2F0AcOa%2BJ0TCFe%2B3EM%3D\",\n  \"nel\": \"{\\\"report_to\\\":\\\"heroku-nel\\\",\\\"max_age\\\":3600,\\\"success_fraction\\\":0.005,\\\"failure_fraction\\\":0.05,\\\"response_headers\\\":[\\\"Via\\\"]}\",\n  \"x-powered-by\": \"Express\",\n  \"access-control-allow-origin\": \"*\",\n  \"ratelimit-policy\": \"100;w=60\",\n  \"ratelimit-limit\": \"100\",\n  \"ratelimit-remaining\": \"99\",\n  \"ratelimit-reset\": \"60\",\n  \"etag\": \"W/\\\"48-+Z5A4MsbyryWjwqUCtZ7548heDc\\\"\",\n  \"via\": \"1.1 vegur\",\n  \"cf-cache-status\": \"DYNAMIC\",\n  \"server\": \"cloudflare\",\n  \"server-timing\": \"cfL4;desc=\\\"?proto=TCP&rtt=54612&min_rtt=52441&rtt_var=10487&sent=9&recv=8&lost=0&retrans=0&sent_bytes=4970&recv_bytes=993&delivery_rate=97421&cwnd=256&unsent_bytes=0&cid=eca62d5aaf2560db&ts=778&x=0\\\"\"\n}\nBody: {\n  \"error\": \"Missing API key.\",\n  \"how_to_get_one\": \"https://reqres.in/signup\"\n}\n\n\nhttps://on.cypress.io/request\n    at <unknown> (http://localhost:50932/__cypress/runner/cypress_runner.js:134979:72)\n    at tryCatcher (http://localhost:50932/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:50932/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:50932/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (http://localhost:50932/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (http://localhost:50932/__cypress/runner/cypress_runner.js:1671:18)\n    at _drainQueueStep (http://localhost:50932/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (http://localhost:50932/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (http://localhost:50932/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (http://localhost:50932/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypressautomation/./cypress/e2e/api_test2.cy.js:13:7)",
+                "diff": null
+              },
+              "uuid": "f5e83beb-21ba-4387-bd57-bb77dec675f6",
+              "parentUUID": "d75c17e1-d128-48be-9ae7-cfe9e4730c7a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b9435de9-7e9a-42b5-b5ab-f59749010565"
+          ],
+          "failures": [
+            "f5e83beb-21ba-4387-bd57-bb77dec675f6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1163,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
