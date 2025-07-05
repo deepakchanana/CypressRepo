@@ -1,25 +1,27 @@
 pipeline {
-  agent {
-    docker {
-      image 'cypress/included:13.10.0'
-      args '-u root:root'
+    agent any
+
+    tools {
+        nodejs 'Node 18' // match name from Global Tools
     }
-  }
-  stages {
-    stage('Install Dependencies') {
-      steps {
-        sh 'npm ci'
-      }
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                git 'https://github.com/your-username/your-repo-name.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('Run Cypress Tests') {
+            steps {
+                sh 'npx cypress run'
+            }
+        }
     }
-    stage('Run Cypress Tests') {
-      steps {
-        sh 'npx cypress run'
-      }
-    }
-  }
-  post {
-    always {
-      archiveArtifacts artifacts: 'cypress/videos/**/*.mp4', allowEmptyArchive: true
-    }
-  }
 }
